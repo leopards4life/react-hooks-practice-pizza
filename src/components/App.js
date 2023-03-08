@@ -13,17 +13,12 @@ useEffect(() => {
   .then(pizzas => setPizzas(pizzas))
 }, [])
 
-// function handleEditPizza() {
-//   console.log("clicked")
-// }
-
   return (
     <>
       <Header />
       <PizzaForm />
       <PizzaList 
         pizzas={pizzas}
-        // onEditPizza={handleEditPizza}
       />
     </>
   );

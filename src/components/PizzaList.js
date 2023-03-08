@@ -2,12 +2,12 @@ import React from "react";
 import Pizza from "./Pizza";
 
 function PizzaList({ pizzas }) {
-  const pizzaList = pizzas.map((pizza) => (
-    <Pizza 
-      key={pizza.id}
-      pizza={pizza}
-    />
-  ))
+  const card = pizzas.map((pizza) => 
+  <Pizza 
+    key={pizza.id}
+    pizza={pizza}
+  />
+  );
 
   return (
     <table className="table table-striped">
@@ -20,7 +20,7 @@ function PizzaList({ pizzas }) {
         </tr>
       </thead>
       <tbody>
-
+{card}
       </tbody>
     </table>
   );
