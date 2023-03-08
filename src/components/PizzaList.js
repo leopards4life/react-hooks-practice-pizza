@@ -1,11 +1,12 @@
 import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({ pizzas }) {
+function PizzaList({ pizzas, onSelectPizza }) {
   const card = pizzas.map((pizza) => (
   <Pizza 
     key={pizza.id}
     pizza={pizza}
+    onSelectPizza={onSelectPizza}
   />
   ));
 
@@ -19,9 +20,7 @@ function PizzaList({ pizzas }) {
           <th scope="col">Edit</th>
         </tr>
       </thead>
-      <tbody>
-{card}
-      </tbody>
+      <tbody>{card}</tbody>
     </table>
   );
 }
