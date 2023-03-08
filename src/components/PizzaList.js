@@ -2,12 +2,12 @@ import React from "react";
 import Pizza from "./Pizza";
 
 function PizzaList({ pizzas }) {
-  const card = pizzas.map((pizza) => 
+  const card = pizzas.map((pizza) => (
   <Pizza 
     key={pizza.id}
     pizza={pizza}
   />
-  );
+  ));
 
   return (
     <table className="table table-striped">
